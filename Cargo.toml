@@ -1,0 +1,17 @@
+[package]
+name = "advent-of-code-2025"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+ac-library-rs = "0.1.1"
+itertools = "0.12.1"
+num = "0.4.1"
+num-bigint = "0.4.4"
+num-decimal = "0.2.5"
+proconio = { version = "0.4.5", features = ["derive"] }
+rust_decimal = "1.34.3"
+superslice = "1.0.0"
+regex = "1.10.4"
+num-traits = "0.2.19"
+easy-ext = "1.0.2"
