@@ -1,2 +1,6 @@
 [tools]
-rust = "1.89.0"
+"cargo:cargo-nextest" = "latest"
+rust = "1.88.0"
+
+[tasks.test]
+run = "cargo nextest run"

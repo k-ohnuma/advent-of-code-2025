@@ -15,3 +15,6 @@ superslice = "1.0.0"
 regex = "1.10.4"
 num-traits = "0.2.19"
 easy-ext = "1.0.2"
+
+[dev-dependencies]
+assert_cmd = "2.1.1"
