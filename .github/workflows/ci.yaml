@@ -1,0 +1,20 @@
+name: test
+on:
+  push:
+    branches: [main]
+  pull_request:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: rustup show
+        run: rustup show
+      - name: Cache
+        uses: Swatinem/rust-cache@v2
+      - name: install nextest
+        uses: taiki-e/install-action@v2
+        with:
+          tool: nextest
+      - name: test
+        run: cargo nextest run

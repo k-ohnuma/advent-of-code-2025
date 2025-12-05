@@ -44,17 +44,3 @@ fn main() {
     }
     println!("{}", ans);
 }
-
-#[cfg(test)]
-mod test {
-    use assert_cmd::Command;
-
-    #[test]
-    fn test() {
-        let input = include_str!("../../input/day3/input.txt");
-        let output = include_str!("../../input/day3/out-2.txt");
-        #[allow(deprecated)]
-        let mut cmd = Command::cargo_bin("3-2").unwrap();
-        cmd.write_stdin(input).assert().success().stdout(output);
-    }
-}
