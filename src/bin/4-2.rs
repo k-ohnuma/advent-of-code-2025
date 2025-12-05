@@ -8,7 +8,16 @@ fn main() {
         s: [Chars; h]
     }
     let w = s[0].len();
-    let didj = vec![(-1, -1), (-1, 0), (-1, 1), (0, -1), (0, 1), (1, -1), (1, 0), (1, 1)];
+    let didj = vec![
+        (-1, -1),
+        (-1, 0),
+        (-1, 1),
+        (0, -1),
+        (0, 1),
+        (1, -1),
+        (1, 0),
+        (1, 1),
+    ];
     let mut ans = vec![vec![false; w]; h];
     let mut c = vec![vec![0; w]; h];
     let mut que = VecDeque::new();
@@ -57,10 +66,9 @@ fn main() {
             }
         }
     }
-    let ans = ans.iter().flatten().filter(|&&e|e).count();
+    let ans = ans.iter().flatten().filter(|&&e| e).count();
     println!("{}", ans);
 }
-
 
 #[cfg(test)]
 mod test {
@@ -75,4 +83,3 @@ mod test {
         cmd.write_stdin(input).assert().success().stdout(output);
     }
 }
-

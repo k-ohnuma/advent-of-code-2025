@@ -63,4 +63,3 @@ mod test {
         cmd.write_stdin(input).assert().success().stdout(output);
     }
 }
-

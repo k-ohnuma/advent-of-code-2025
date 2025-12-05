@@ -1,13 +1,21 @@
 use proconio::{input, marker::Chars};
 
-
 fn main() {
     let h = 139;
     input! {
         s: [Chars; h]
     }
     let w = s[0].len();
-    let didj = vec![(-1, -1), (-1, 0), (-1, 1), (0, -1), (0, 1), (1, -1), (1, 0), (1, 1)];
+    let didj = vec![
+        (-1, -1),
+        (-1, 0),
+        (-1, 1),
+        (0, -1),
+        (0, 1),
+        (1, -1),
+        (1, 0),
+        (1, 1),
+    ];
     let mut ans = 0;
     for i in 0..h {
         for j in 0..w {
@@ -48,4 +56,3 @@ mod test {
         cmd.write_stdin(input).assert().success().stdout(output);
     }
 }
-
