@@ -91,6 +91,23 @@ fn test5_2() {
 }
 
 #[test]
+fn test6_1() {
+    let input = include_str!("../input/day6/input.txt");
+    let output = include_str!("../input/day6/out-1.txt");
+    #[allow(deprecated)]
+    let mut cmd = Command::cargo_bin("6-1").unwrap();
+    cmd.write_stdin(input).assert().success().stdout(output);
+}
+#[test]
+fn test6_2() {
+    let input = include_str!("../input/day6/input.txt");
+    let output = include_str!("../input/day6/out-2.txt");
+    #[allow(deprecated)]
+    let mut cmd = Command::cargo_bin("6-2").unwrap();
+    cmd.write_stdin(input).assert().success().stdout(output);
+}
+
+#[test]
 fn test7_1() {
     let input = include_str!("../input/day7/input.txt");
     let output = include_str!("../input/day7/out-1.txt");
