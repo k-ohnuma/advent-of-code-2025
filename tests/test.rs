@@ -139,3 +139,19 @@ fn test8_2() {
     let mut cmd = Command::cargo_bin("8-2").unwrap();
     cmd.write_stdin(input).assert().success().stdout(output);
 }
+#[test]
+fn test11_1() {
+    let input = include_str!("../input/day11/input.txt");
+    let output = include_str!("../input/day11/out-1.txt");
+    #[allow(deprecated)]
+    let mut cmd = Command::cargo_bin("11-1").unwrap();
+    cmd.write_stdin(input).assert().success().stdout(output);
+}
+#[test]
+fn test11_2() {
+    let input = include_str!("../input/day11/input.txt");
+    let output = include_str!("../input/day11/out-2.txt");
+    #[allow(deprecated)]
+    let mut cmd = Command::cargo_bin("11-2").unwrap();
+    cmd.write_stdin(input).assert().success().stdout(output);
+}
