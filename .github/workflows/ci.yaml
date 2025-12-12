@@ -17,4 +17,4 @@ jobs:
         with:
           tool: nextest
       - name: test
-        run: cargo nextest run
+        run: cargo nextest run --release

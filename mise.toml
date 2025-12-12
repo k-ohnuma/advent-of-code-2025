@@ -3,4 +3,4 @@
 rust = "1.88.0"
 
 [tasks.test]
-run = "cargo nextest run"
+run = "cargo nextest run --release"
